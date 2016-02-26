@@ -1,0 +1,1 @@
+cat chars | grep -o . | sort | uniq -c | sort -rn; echo
