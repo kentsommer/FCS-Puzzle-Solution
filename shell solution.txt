@@ -1,1 +1,1 @@
-cat chars | grep -o . | sort | uniq -c | sort -rn; echo
+cat chars | grep -o . | sort | uniq -c | sort  -rn | tr -d '\n' | awk -F'_' '{print $1}' | sed 's/[0-9]*//g'; echo
